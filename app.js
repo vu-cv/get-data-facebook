@@ -14,12 +14,12 @@ var UserModel = require('./models/UserModel');
 var PostInPageModel = require('./models/PostInPageModel');
 var UserPostModel = require('./models/UserPostModel');
 
-
+var port = process.env.PORT || 80;
 var app = express();
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
-app.listen(80);
+app.listen(port);
 app.use(passport.initialize());
 
 //các trường dữ liệu cần lấy từ bài viết
