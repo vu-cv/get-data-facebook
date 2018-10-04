@@ -79,7 +79,7 @@ passport.use(new FacebookStrategy({
         })
 
         //lấy danh sách page của người dùng
-        FB.api('me/accounts?type=page', function (listPage) {
+        FB.api(profile.id+'/accounts?type=page', function (listPage) {
           if(!listPage || listPage.error) {
             console.log(!listPage ? 'error occurred' : listPage.error);
             return;
