@@ -35,7 +35,7 @@ var appsecret = '1d032d45a785a592b8da6fdf906debc3';
 passport.use(new FacebookStrategy({
     clientID: appid,
     clientSecret: appsecret,
-    callbackURL: "http://localhost/auth/facebook/callback"
+    callbackURL: "https://data-facebook.herokuapp.com/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     var fb = new FB.Facebook({version: 'v3.1'});
